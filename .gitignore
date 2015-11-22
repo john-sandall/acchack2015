@@ -1,0 +1,12 @@
+*.gz
+*.bz2
+
+answeredquestions-all-answertext.json
+answeredquestions-full.csv
+answeredquestions_downloaded.csv
+answeredquestions_sample.csv
+
+analysis/*.csv
+
+data/answeredquestions-*.json
+presentation/resrouces
