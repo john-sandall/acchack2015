@@ -2,7 +2,11 @@
 # -*- encoding:utf-8 -*-
 
 import csv
-import simplejson as json
+import gzip
+try:
+    import json
+except ImportError:
+    import simplejson as json
 
 
 def write_to_csv(mylist, filename, print_exceptions=False):
@@ -27,9 +31,9 @@ def write_to_csv(mylist, filename, print_exceptions=False):
     return True
 
 
-filename = './data/answeredquestions-all.json'
+filename = './data/answeredquestions-all.json.gz'
 
-with open(filename) as f:
+with gzip.open(filename) as f:
     data = json.loads(f.read())
 
 out = [['id',
